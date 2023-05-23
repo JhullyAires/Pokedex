@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import './scss/rem-calc.scss';
+@import './scss/reset.scss';
+@import './scss/variables.scss';
+@import './scss/button.scss';
+@import './scss/animation.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+  font-family: 'Montserrat', sans-serif;
+  background: var(--primary-color);
+}
+main{
+  width: rem-calc(600);
+  box-sizing: border-box;
+  padding: 0 20px;
+	margin: 0 auto;
+}
