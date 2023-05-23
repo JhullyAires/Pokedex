@@ -23,13 +23,13 @@ export class DatailsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getPokemon;
+    this.getPokemon();
   }
 
   public getPokemon() {
     const id = this.activatedRoute.snapshot.params['id'];
-    const pokemon = this.pokeApiServise.apiGetPokemons(`${this.urlPokemon}/${id }`);
-    const name = this.pokeApiServise.apiGetPokemons(`${this.urlName}/${id }`);
+    const pokemon = this.pokeApiServise.apiGetPokemons(`${this.urlPokemon}/${id}`);
+    const name = this.pokeApiServise.apiGetPokemons(`${this.urlName}/${id}`);
 
     return forkJoin([pokemon, name]).subscribe(
       res => {
