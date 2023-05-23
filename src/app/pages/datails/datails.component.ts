@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { PokeApiService } from 'src/app/service/poke-api.service';
@@ -8,7 +8,7 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
   templateUrl: './datails.component.html',
   styleUrls: ['./datails.component.scss']
 })
-export class DatailsComponent {
+export class DetailsComponent implements OnInit {
 
   private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
   private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
