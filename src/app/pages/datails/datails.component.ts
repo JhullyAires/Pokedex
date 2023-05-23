@@ -8,7 +8,7 @@ import { PokeApiService } from 'src/app/service/poke-api.service';
   templateUrl: './datails.component.html',
   styleUrls: ['./datails.component.scss']
 })
-export class DetailsComponent implements OnInit {
+export class DatailsComponent implements OnInit {
 
   private urlPokemon: string = 'https://pokeapi.co/api/v2/pokemon';
   private urlName: string = 'https://pokeapi.co/api/v2/pokemon-species';
@@ -26,7 +26,7 @@ export class DetailsComponent implements OnInit {
     this.getPokemon;
   }
 
-  public getPokemon() {
+  get getPokemon() {
     const id = this.activatedRoute.snapshot.params['id'];
     const pokemon = this.pokeApiServise.apiGetPokemons(`${this.urlPokemon}/${id }`);
     const name = this.pokeApiServise.apiGetPokemons(`${this.urlName}/${id }`);
